@@ -84,7 +84,7 @@ end
 def turn
     puts "Please enter 1-9:"
     input = gets.strip
-    current_player
+    token = current_player
     index = input_to_index(input)
     if valid_move?(index)
       move(index, token)
