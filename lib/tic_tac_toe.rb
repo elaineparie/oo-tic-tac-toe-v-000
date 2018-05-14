@@ -67,11 +67,18 @@ def valid_move?(index)
     true
   else
     nil
+  end
 end
 
-
+def current_player
+  if turn_count.even?
+  "X"
+elsif turn_count.odd?
+    "O"
+  else
+    nil
+  end
 end
-
 
 
 
