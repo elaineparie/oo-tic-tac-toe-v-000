@@ -37,11 +37,21 @@ end
 
 def move(index, token)
   board[index] = token
-  if turn_count.even?
+  if turn_count(board).even?
     token = "X"
-  elsif turn_count.odd?
+  elsif turn_count(board).odd?
     token = "O"
   end
+end
+
+def turn_count
+  counter = 0
+board.each do |turn|
+  if turn != " "
+  counter += 1
+end
+end
+counter
 end
 
 
