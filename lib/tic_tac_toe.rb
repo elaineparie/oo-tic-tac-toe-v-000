@@ -114,6 +114,20 @@ def full?
   board.none?{|position| position == " "}
 end
 
+def draw?
+  full? && !won?
+end
+
+def over?
+  won? || full? || draw?
+end
+
+def winner
+  if won?
+  board[won?[0]]
+  else
+  end
+end
 
 
 
