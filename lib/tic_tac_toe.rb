@@ -60,6 +60,7 @@ true
   else board[index] == "   " || board[index] == " " || board[index] == nil
     false
 end
+end
 
 def valid_move?(index)
   if index.between?(0,8) && !position_taken?(index)
@@ -67,10 +68,12 @@ def valid_move?(index)
   else
     nil
 end
-end
 
 
 end
+
+
+
 
 
 end
