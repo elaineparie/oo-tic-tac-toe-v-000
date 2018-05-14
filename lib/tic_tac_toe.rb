@@ -94,6 +94,22 @@ def turn
     end
 end
 
+def won?
+winning_combination = WIN_COMBINATIONS.select do |array|
+    win_index_1 = array[0]
+    win_index_2 = array[1]
+    win_index_3 = array[2]
+    if board[win_index_1] == "X" && board[win_index_2] == "X" && board[win_index_3] == "X"
+      array
+    elsif board[win_index_1] == "O" && board[win_index_2] == "O" && board[win_index_3] == "O"
+      array
+    else
+      false
+    end
+  end
+  winning_combination[0]
+end
+
 
 
 
