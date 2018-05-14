@@ -37,9 +37,9 @@ end
 
 def move(index, token)
   board[index] = token
-  if turn_count(board).even?
+  if turn_count.even?
     token = "X"
-  elsif turn_count(board).odd?
+  elsif turn_count.odd?
     token = "O"
   end
 end
