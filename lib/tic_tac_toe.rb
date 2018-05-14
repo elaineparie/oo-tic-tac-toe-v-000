@@ -110,6 +110,10 @@ winning_combination = WIN_COMBINATIONS.select do |array|
   winning_combination[0]
 end
 
+def full?
+  board.none?{|position| position == " "}
+end
+
 
 
 
