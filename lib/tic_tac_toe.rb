@@ -81,6 +81,23 @@ elsif turn_count.odd?
 end
 
 
+def turn
+    puts "Please enter 1-9:"
+    input = gets.strip
+    if turn_count.even?
+      token = "X"
+    elsif turn_count.odd?
+      token = "O"
+    end
+    index = input_to_index(input)
+    if valid_move?(index)
+      move(board, index, token)
+      display_board
+    else
+      turn
+    end
+end
+
 
 
 end
