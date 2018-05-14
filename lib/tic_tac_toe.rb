@@ -35,5 +35,14 @@ def input_to_index(input)
   input.to_i - 1
 end
 
+def move(board, index, token)
+  board[index] = token
+  if turn_count(board).even?
+    token = "X"
+  elsif turn_count(board).odd?
+    token = "O"
+  end
+end
+
 
 end
